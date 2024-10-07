@@ -1,0 +1,27 @@
+.backgroundImage {
+    height: -webkit-fill-available;
+    width: -webkit-fill-available;
+    z-index: -1;
+    position: absolute;
+    /* background-image: url(https://cdn.pixabay.com/photo/2023/11/01/11/15/cable-car-8357178_1280.jpg); */
+    /* background-image: url(https://images.pexels.com/photos/2048434/pexels-photo-2048434.jpeg); */
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+@media (max-width:768px) {
+    .message {
+        position: relative;
+    }
+    .backgroundImage {
+        background-image: url(https://images.pexels.com/photos/3037133/pexels-photo-3037133.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1);                         
+    }
+}
+
+@media (min-width:768px) {
+    .backgroundImage {
+        filter: blur(1.5px);
+        background-image: url(https://cdn.pixabay.com/photo/2023/11/01/11/15/cable-car-8357178_1280.jpg);
+    }
+}

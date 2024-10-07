@@ -1,0 +1,6 @@
+.messageBox::-webkit-scrollbar{
+    display: none;
+}
+.messageBox{
+    /* backdrop-filter: blur(1px); */
+}
