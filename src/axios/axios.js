@@ -1,7 +1,8 @@
 import axios from 'axios'
 
-const url = process.env.VERCEL_REACT_APP_SERVER_URL
+const url = process.env.REACT_APP_VERCEL_SERVER_URL
 const url1 = 'http://localhost:5500'
+console.log(url);
 
 export const authRoute = axios.create({
     baseURL: `${url}/auth`
