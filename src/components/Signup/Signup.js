@@ -13,6 +13,7 @@ function Signup() {
     const [authInfo, setAuthInfo] = useState({ username: "", email: "", password: "" })
     const [loading, setLoading] = useState(false)
     const [testLoading, setTestLoading] = useState(false)
+    const [testLoading2, setTestLoading2] = useState(false)
     const [errorMsg, setErrorMsg] = useState("")
     const dispatch = useDispatch()
     const navigate = useNavigate()
@@ -67,6 +68,39 @@ function Signup() {
                 setErrorMsg("")
             }, 2500);
             setTestLoading(false)
+        }
+    }
+
+    const testUserLogin2 = async (e) => {
+        e.preventDefault()
+        setTestLoading2(true)
+        try {
+            // console.log(process.env.REACT_APP_SERVER_UR);
+            const loginRequest = await authRoute.post('/loginuser', {
+                email: 'secondtestuser@gmail.com',
+                password: 'secondtest12345'
+            })
+            dispatch(login({ ...loginRequest.data.data }))
+            // console.log(loginRequest);
+            setTestLoading2(false)
+            localStorage.setItem('token', loginRequest.data.data.token)
+
+            const allUsers = await getAllUsers()
+            // console.log("getAllUsers", getAllUsers);
+            dispatch(setAllUsers(allUsers.data))
+
+            const convos = await fetchConvos()
+            // console.log(convos);
+            // console.log("fetchConvos", convos);
+            dispatch(setConvos({ ...convos.data }))
+            navigate('/')
+        } catch (error) {
+            console.log(error);
+            setErrorMsg(error?.response?.data?.message)
+            setTimeout(() => {
+                setErrorMsg("")
+            }, 2500);
+            setTestLoading2(false)
         }
     }
 
@@ -148,7 +182,18 @@ function Signup() {
                                     {
                                         testLoading ?
                                             <span className="loader"></span> :
-                                            <>Test User <ArrowRight className="ml-2" size={16} /> </>
+                                            <>{"Test User (1)"}<ArrowRight className="ml-2" size={16} /> </>
+                                    }
+                                </button>
+                                <button
+                                    onClick={testUserLogin2}
+                                    type="button"
+                                    className="mt-2 inline-flex w-full items-center justify-center rounded-md bg-[#2563eb] px-3.5 py-2 font-semibold leading-7 text-white hover:bg-[#2564ebe8]"
+                                >
+                                    {
+                                        testLoading2 ?
+                                            <span className="loader"></span> :
+                                            <>{"Test User (2)"}<ArrowRight className="ml-2" size={16} /> </>
                                     }
                                 </button>
                             </div>
