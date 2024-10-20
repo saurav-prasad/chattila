@@ -1,7 +1,7 @@
 import axios from 'axios'
 
-const url1 = process.env.REACT_APP_SERVER_URL
-const url = 'http://localhost:5500'
+const url = process.env.REACT_APP_SERVER_URL
+const url1 = 'http://localhost:5500'
 // console.log(url);
 
 export const authRoute = axios.create({
