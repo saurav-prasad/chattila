@@ -68,8 +68,8 @@ function Chats() {
                     {
                         chatUsers?.map((data, i) =>
                             (data?.id !== user?.id) &&
-                            <Slide damping={0.1} direction='up' duration={300} triggerOnce={true} cascade>
-                                < User userId={data?.id} image={data.profilePhoto} name={data.username} lastMessage="tum kya karti" key={i} />
+                            <Slide key={i} damping={0.1} direction='up' duration={300} triggerOnce={true} cascade>
+                                < User userId={data?.id} image={data.profilePhoto} name={data.username} lastMessage="tum kya karti" />
                             </Slide>
                         )
                     }

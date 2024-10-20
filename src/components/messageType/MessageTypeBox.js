@@ -19,6 +19,7 @@ function MessageType() {
     const params = useParams()
     const dispatch = useDispatch()
     const allUsers = useSelector(state => state.allUsersSlice)
+    const { user } = useSelector(state => state.authSlice)
 
     const sendMessage = async () => {
         try {
@@ -27,7 +28,7 @@ function MessageType() {
             if (params.userid && (textLength > 0)) {
                 const message = await createMessage({ content: text, receiver: params.userid })
                 dispatch(addNewMessage({ userId: params.userid, data: message.data }))
-                dispatch(addLastMessage({ content: text, userId: params.userid }))
+                dispatch(addLastMessage({ content: text, userId: params.userid, sender: user.id }))
                 const userData = allUsers?.filter((obj) => obj.id === params?.userid)
                 const { profilePhoto, username } = userData[0]
                 socket.emit('private-message', { ...message.data, username, profilePhoto })
@@ -78,4 +79,4 @@ function MessageType() {
     )
 }
 
-export default MessageType
+export default MessageType 

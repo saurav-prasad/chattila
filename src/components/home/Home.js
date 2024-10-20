@@ -95,17 +95,17 @@ function Home() {
 
                 {(showNoti && showNoti.userId !== params?.userid) &&
 
-                    <div class={`flex justify-between py-1 px-2 bg-[#eaeaeaf5] rounded-lg absolute right-[18%] top-1 md:right-1 md:max-w-[40vw] lg:max-w-[30vw] w-[60%] z-[10] transition-all ease-in-out`}>
-                        <div class="flex items-center space-x-4">
-                            <img src={showNoti.profilePhoto} class="rounded-full h-10 w-10" alt="" />
-                            <div class="flex flex-col space-y-1">
-                                <span class="font-bold">{showNoti.username}</span>
-                                <span class="text-sm"> {
+                    <div className={`flex justify-between py-1 px-2 bg-[#eaeaeaf5] rounded-lg absolute right-[18%] top-1 md:right-1 md:max-w-[40vw] lg:max-w-[30vw] w-[60%] z-[10] transition-all ease-in-out`}>
+                        <div className="flex items-center space-x-4">
+                            <img src={showNoti.profilePhoto} className="rounded-full h-10 w-10" alt="" />
+                            <div className="flex flex-col space-y-1">
+                                <span className="font-bold">{showNoti.username}</span>
+                                <span className="text-sm"> {
                                     sliceString(showNoti.content, 80)
                                 } </span>
                             </div>
                         </div>
-                        <div class="flex-none px-2 py-2 text-stone-600 text-xs md:text-sm">
+                        <div className="flex-none px-2 py-2 text-stone-600 text-xs md:text-sm">
                             Just now
                         </div>
                     </div>

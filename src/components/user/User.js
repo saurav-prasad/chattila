@@ -15,9 +15,10 @@ import { Slide } from 'react-awesome-reveal'
 function User({ image, name, userId, isPopup = false }) {
     const [isOnline, setIsOnline] = useState(false)
     const [lastMessageState, setLastMessageState] = useState()
+    const [isYou, setIsYou] = useState()
     const onlineUsers = useSelector(state => state.onlineUsersSlice)
     const messages = useSelector(state => state.messagesSlice)
-    const user = useSelector(state => state.authSlice)
+    const { user } = useSelector(state => state.authSlice)
     const lastMessage = useSelector(state => state.lastMessageSlice)
     const convos = useSelector(state => state.convosSlice)
     const navigate = useNavigate()
@@ -59,6 +60,8 @@ function User({ image, name, userId, isPopup = false }) {
             try {
                 if (lastMessage[userId]) {
                     setLastMessageState({ ...lastMessage[userId] })
+                    const a = (lastMessage[userId].sender === user.id) && (lastMessage[userId].content !== undefined)
+                    setIsYou(a)
                 }
                 else {
                     const message = await getLastMessage(userId)
@@ -69,6 +72,10 @@ function User({ image, name, userId, isPopup = false }) {
                         isRead: message.data?.isRead,
                         sender: message.data?.sender
                     }
+
+                    const a = (obj.sender === user.id) && (obj.content !== undefined)
+                    setIsYou(a)
+
                     setLastMessageState({ ...obj })
                     dispatch(addLastMessage({ ...obj }))
                 }
@@ -95,9 +102,9 @@ function User({ image, name, userId, isPopup = false }) {
                     className="inline-block h-12 w-12 rounded-full ring-1 ring-white object-cover"
                 />
                 <div className='text-[#fff]'>
-                    <p className='sm:text-lg text-base font-medium select-none text-ellipsis'>{sliceString(name)}</p>
+                    <p className='sm:text-lg text-base font-medium select-none text-ellipsis'>{sliceString(name, 17)}</p>
                     <p className='sm:text-sm text-xs font-normal select-none text-ellipse'>
-                        {!(lastMessageState?.sender) && (lastMessageState?.content) && "You: "}{sliceString(lastMessageState?.content, 14)}
+                        {isYou && "You: "}{sliceString(lastMessageState?.content, 14)}
                     </p>
                 </div>
                 {

@@ -2,7 +2,7 @@ import { convosRoute } from "../axios/axios";
 
 const addConvos = async (userid) => {
     try {
-        console.log("object");
+        // console.log("object");
         const addedConvos = await convosRoute.post(`/adduser/${userid}`,{}, {
             headers: {
                 'auth-token': localStorage.getItem('token')
