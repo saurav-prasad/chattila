@@ -68,9 +68,10 @@ function MessageType() {
     }, [params.userid])
 
     return (
-        <div className='flex items-center pb-1 pt-1 bg-[#2c2c2c] gap-1 w-full'>
+        // #2c2c2c
+        <div className='flex items-center pb-1 pt-1 bg-[#AE9BA1] gap-1 w-full'>
             {/* textbox */}
-            <textarea autoFocus value={text} onChange={textAreaHeightAdjust} placeholder='Type Something...' type="text" className='messageInputBox bg-[#2c2c2c] text-[#ffff] px-2 py-1 text-lg hover:bg-[#6b6a6ab0] transition-all w-full overflow-hidden outline-none' />
+            <textarea autoFocus value={text} onChange={textAreaHeightAdjust} placeholder='Type Something...' type="text" className='messageInputBox bg-[#AE9BA1] text-[#ffff] px-2 py-1 text-lg hover:bg-[#6b6a6ab0] transition-all w-full overflow-hidden outline-none' />
             {/* Send button */}
             <div onClick={onClick} className='w-16 h-full flex justify-center items-center hover:bg-[#6b6a6a6e] transition-all cursor-pointer rounded-sm active:bg-[#6b6a6ad2]'>
                 <Send fontSize='large' className='text-[#ffff] ' />

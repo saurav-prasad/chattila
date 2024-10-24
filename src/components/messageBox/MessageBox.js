@@ -59,10 +59,19 @@ function MessageBox() {
       messageBoxRef.current.scrollTop = messageBoxRef.current.scrollHeight
     }
   }, [allMessages])
-
+  // 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
   return (
     <div ref={messageBoxRef} className='messageBox h-full flex flex-col gap-3 px-3 overflow-auto pt-3 w-full lg:w-[68%] pb-1'>
-      {(user && allMessages) &&
+
+      { //bg-[#f9fafba8] text-gray-900 
+        allMessages?.length <= 0 &&
+        <p className=' bg-[#f9fafba8] text-gray-900  font-semibold text-xl p-3 rounded-lg text-center'>
+          Send a message to start the chat...
+        </p>
+      }
+
+      {
+        (user && allMessages) &&
         allMessages?.map((item, i) =>
           (user.id === item?.sender) ?
             <div className='w-full' key={i}>
@@ -84,7 +93,7 @@ function MessageBox() {
             </div>
         )
       }
-    </div>
+    </div >
   )
 }
 

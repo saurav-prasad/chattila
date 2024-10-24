@@ -46,15 +46,18 @@ function Chats() {
 
     return (
         <>
-            <div className={`h-full ${(params.userid && windowWidth <= 768) ? 'hidden' : 'block'}`}>
-                <div className='h-[6%] px-2 pt-2 pb-1 flex justify-between items-center space-x-2 border-red-400 border-b'>
-                    <div className='flex items-center space-x-1'>
-                        <img src={user?.profilePhoto} className='h-10 w-10 rounded-full' alt="" />
-                        <h2 className='sm:text-xl text-lg text-white'>{user?.username}</h2>
-                    </div>
-                    {/* <button onClick={onSubmit}>Logout</button> */}
-                    <div className='flex items-center space-x-2'>
-                        <UserRoundPlus onClick={() => setToggleOpen(!toggleOpen)} className='text-white cursor-pointer' />
+            <div className={`h-full bg-#A08790 border-r-2 border-[#222222] shadow-2xl shadow-[#222222] ${(params.userid && windowWidth <= 768) ? 'hidden' : 'block'}`}>
+                {/* bg-[#8ABFA3] */}
+                <div className='h-[11%] px-2 py-1 flex flex-col justify-center items-start space-y-2'>
+                    <div className='flex justify-between items-center space-x-2'>
+                        {/* border-red-400 border-b */}
+                        <div className='flex items-center space-x-1 pr-1'>
+                            <img src={user?.profilePhoto} className='h-10 w-10 rounded-full' alt="" />
+                            <h2 className='sm:text-xl text-lg text-white'>{user?.username}</h2>
+                        </div>
+                        {/* <button onClick={onSubmit}>Logout</button> */}
+                        {/* <div className='flex items-center space-x-2'> */}
+                        {/* <UserRoundPlus onClick={() => setToggleOpen(!toggleOpen)} className='text-white cursor-pointer' /> */}
                         <button
                             onClick={onSubmit}
                             type="button"
@@ -62,9 +65,25 @@ function Chats() {
                         >
                             Logout
                         </button>
+                        {/* </div> */}
                     </div>
+                    <div className='flex justify-around items-center w-full'>
+
+                        {/* border-red-400 border-b */}
+                        <div className='hover:bg-[#f9eccfe7] text-white hover:text-black transition-all flex items-center space-x-2 py-1 px-3 border rounded-full select-none cursor-pointer border-[#84beea]'>
+                            <h2 className='sm:text-xl text-lg font-semibold'>Ask</h2>
+                            <img src="/images/robot2.png" className='h-8 w-8 object-contain rounded-full' alt="" />
+                        </div>
+                        <div onClick={() => setToggleOpen(!toggleOpen)} className='hover:bg-[#000000] transition-all flex items-center space-x-2 py-1 px-3 border rounded-full select-none cursor-pointer border-[#84beea]'>
+                            <h2 className='sm:text-xl text-lg font-semibold text-white'>Add</h2>
+                            <UserRoundPlus className='text-[#66d5f6] cursor-pointer' />
+                        </div>
+
+                    </div>
+
                 </div>
-                <div className='md:flex-[1] w-full chatbox space-y-2 border-r-2 border-[#222222] shadow-2xl shadow-[#222222] overflow-y-auto h-[94%] bg-[#2c2c2c] px-2 pt-2'>
+                <div className='md:flex-[1] w-full chatbox space-y-2  overflow-y-auto h-[89%] bg-[#bb6b35e0] px-2 pt-2'>
+                    {/* bg-[#2c2c2c] */}
                     {
                         chatUsers?.map((data, i) =>
                             (data?.id !== user?.id) &&
