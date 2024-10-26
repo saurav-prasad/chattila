@@ -30,7 +30,7 @@ function User({ image, name, userId, isPopup = false }) {
     }, [onlineUsers])
 
     const onClick = async () => {
-        const a = await readAllMessages(userId)
+        await readAllMessages(userId)
         dispatch(updateReadBy(userId))
         navigate(`/${userId}`)
     }
@@ -91,7 +91,7 @@ function User({ image, name, userId, isPopup = false }) {
         <div className='flex items-center space-x-2'>
             {isPopup &&
                 (convos?.peoples?.includes(userId) ?
-                    <Minus onClick={onRemoveConvos} className='text-white cursor-pointer hover:bg-[#6b6a6a] transition-all rounded-sm' />
+                    <Minus onClick={onRemoveConvos} className='text-black cursor-pointer hover:bg-[#6b6a6a] transition-all rounded-sm' />
                     :
                     <Plus onClick={onAddConvos} className='text-white cursor-pointer hover:bg-[#6b6a6a] transition-all rounded-sm' />)
             }
@@ -109,7 +109,7 @@ function User({ image, name, userId, isPopup = false }) {
                 </div>
                 {
                     (!lastMessageState?.isRead && lastMessageState?.content && lastMessageState?.userId === lastMessageState?.sender)
-                    && <img className='w-4 h-4 object-contain absolute bottom-6 right-5' src="/images/receive-mail.png" alt="" />
+                    && <img className='w-4 h-4 object-contain absolute bottom-[1.8rem] right-[0.12rem]' src="/images/receive-mail.png" alt="" />
                 }
                 <div className={`${isOnline ? 'bg-green-400' : 'bg-[#e21a15]'} rounded-full w-2 h-2 absolute bottom-2 right-6`} />
             </div>

@@ -55,14 +55,7 @@ function MessageType() {
     const onClick = () => {
         throttledSendMessage();
     }
-    // useEffect(() => {
-    //     window.addEventListener('keyup', async (key) => {
-    //         //console.log(key);
-    //         if (key.key === 'Enter') {
-    //             await sendMessage()
-    //         }
-    //     })
-    // }, [])
+    
     useEffect(() => {
         setText('')
     }, [params.userid])
@@ -71,9 +64,9 @@ function MessageType() {
         // #2c2c2c
         <div className='flex items-center pb-1 pt-1 bg-[#AE9BA1] gap-1 w-full'>
             {/* textbox */}
-            <textarea autoFocus value={text} onChange={textAreaHeightAdjust} placeholder='Type Something...' type="text" className='messageInputBox bg-[#AE9BA1] text-[#ffff] px-2 py-1 text-lg hover:bg-[#6b6a6ab0] transition-all w-full overflow-hidden outline-none' />
+            <textarea value={text} onChange={textAreaHeightAdjust} placeholder='Type Something...' type="text" className='messageInputBox bg-[#AE9BA1] text-black px-2 py-1 text-lg hover:bg-[#cab1b9] transition-all w-full overflow-hidden outline-none placeholder:text-black placeholder:font-medium font-medium focus:bg-[#cab1b9]' />
             {/* Send button */}
-            <div onClick={onClick} className='w-16 h-full flex justify-center items-center hover:bg-[#6b6a6a6e] transition-all cursor-pointer rounded-sm active:bg-[#6b6a6ad2]'>
+            <div onClick={onClick} className='w-16 h-full flex justify-center items-center hover:bg-[#cab1b9] transition-all cursor-pointer rounded-sm active:bg-[#6b6a6ad2]'>
                 <Send fontSize='large' className='text-[#ffff] ' />
             </div>
         </div>

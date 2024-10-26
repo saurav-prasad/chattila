@@ -89,7 +89,7 @@ function Home() {
 
     return (
         <>
-            <div className='md:flex h-full bg-[#2c2c2c] relative'>
+            <div className='md:flex h-full bg-[#bb6b35e0] relative'>
                 <Chats />
                 <Message />
 
