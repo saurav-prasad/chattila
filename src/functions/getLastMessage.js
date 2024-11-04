@@ -1,4 +1,4 @@
-const { personalMessageRoute } = require("../axios/axios");
+const { personalMessageRoute } = require("../axios/backend");
 
 const getLastMessage = async (userId) => {
     try {

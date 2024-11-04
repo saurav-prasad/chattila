@@ -12,9 +12,6 @@ import { setAllUsers } from './redux/functions/allUsers';
 import fetchUsers from './functions/fetchUser';
 import getAllUsers from './functions/getAllUsers'
 import fetchConvos from './functions/fetchConvos'
-import createMessage from './functions/createMessage';
-import { messageRoute, personalMessageRoute } from './axios/axios';
-import { addMessages } from './redux/functions/messages';
 
 function App() {
 

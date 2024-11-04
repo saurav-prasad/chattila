@@ -1,4 +1,4 @@
-import { authRoute } from "../axios/axios";
+import { authRoute } from "../axios/backend";
 
 const fetchUsers = async () => {
     try {

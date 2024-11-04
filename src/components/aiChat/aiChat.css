@@ -1,0 +1,33 @@
+.aiBackgroundImage {
+    height: -webkit-fill-available;
+    width: -webkit-fill-available;
+    z-index: -1;
+    position: absolute;
+    filter:blur(0.5px);
+    /* background-image: url(https://cdn.pixabay.com/photo/2023/11/01/11/15/cable-car-8357178_1280.jpg); */
+    /* background-image: url(https://images.pexels.com/photos/2048434/pexels-photo-2048434.jpeg); */
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+@media (max-width:768px) {
+    /* .message {
+        position: relative;
+    } */
+
+    .aiBackgroundImage {
+        /* filter: blur(1px); */
+        background-image: url(https://cdn.pixabay.com/photo/2023/11/07/06/52/forest-8371211_1280.jpg);
+    }
+}
+
+/* desktop */
+@media (min-width:768px) {
+    .aiBackgroundImage {
+        /* filter: blur(1px); */
+        background-image: url(https://miro.medium.com/v2/resize:fit:2400/1*DiDdPH7MsEe_nPImQqyBaw.png);
+    }
+}
+
+/* https://cdn.pixabay.com/photo/2023/11/01/11/15/cable-car-8357178_1280.jpg */

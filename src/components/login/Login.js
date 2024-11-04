@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from 'react'
 import { ArrowRight } from 'lucide-react'
-import { authRoute } from '../../axios/axios'
+import { authRoute } from '../../axios/backend'
 import './login.css'
 import { useDispatch, useSelector } from 'react-redux'
 import { login } from '../../redux/functions/auth'

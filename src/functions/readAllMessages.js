@@ -1,4 +1,4 @@
-import { personalMessageRoute } from "../axios/axios"
+import { personalMessageRoute } from "../axios/backend"
 
 const readAllMessages = async (senderId) => {
     try {

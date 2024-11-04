@@ -1,6 +1,6 @@
 import React, { useState } from 'react'
 import { ArrowRight } from 'lucide-react'
-import { authRoute } from '../../axios/axios'
+import { authRoute } from '../../axios/backend'
 import { useDispatch } from 'react-redux'
 import { login } from '../../redux/functions/auth'
 import { Link, useNavigate } from 'react-router-dom'

@@ -1,11 +1,10 @@
 import React, { useEffect, useRef, useState } from 'react'
 import './messageBox.css'
 import { useDispatch, useSelector } from 'react-redux'
-import { personalMessageRoute } from '../../axios/axios'
+import { personalMessageRoute } from '../../axios/backend'
 import { addMessages, addNewMessage } from '../../redux/functions/messages'
 import { useParams } from 'react-router-dom'
 import sortArray from '../../functions/sortArray'
-import socket from '../../socket/socket'
 import timePassed from '../../functions/timePasses'
 import { updateReadBy } from '../../redux/functions/lastMessage'
 

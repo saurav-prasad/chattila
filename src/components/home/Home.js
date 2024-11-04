@@ -3,12 +3,11 @@ import Chats from '../chats/Chats'
 import Message from '../message/Message'
 import { useNavigate, useParams } from 'react-router-dom'
 import { useDispatch, useSelector } from 'react-redux'
-import socket from "../../socket/socket"
+import socket from "../../axios/socket"
 import { addOnlineUsers, removeOnlineUser } from '../../redux/functions/onlineUsers'
-import { authRoute } from '../../axios/axios'
+import { authRoute } from '../../axios/backend'
 import { addUserDetail, removeUserDetail } from '../../redux/functions/userDetails'
-import AllUsers from '../allUsers/AllUsers'
-import { addMessages, addNewMessage } from '../../redux/functions/messages'
+import { addNewMessage } from '../../redux/functions/messages'
 import { addLastMessage } from '../../redux/functions/lastMessage'
 import sliceString from '../../functions/sliceString'
 

@@ -4,9 +4,8 @@ import createMessage from '../../functions/createMessage';
 import { useParams } from 'react-router-dom';
 import { useDispatch, useSelector } from 'react-redux';
 import { addNewMessage } from '../../redux/functions/messages';
-import socket from '../../socket/socket';
+import socket from '../../axios/socket';
 import { addLastMessage } from '../../redux/functions/lastMessage';
-import throttle from '../../functions/throttling';
 import { Send } from 'lucide-react';
 
 function MessageType() {
@@ -55,7 +54,7 @@ function MessageType() {
     const onClick = () => {
         throttledSendMessage();
     }
-    
+
     useEffect(() => {
         setText('')
     }, [params.userid])

@@ -1,4 +1,4 @@
-import { personalMessageRoute } from "../axios/axios";
+import { personalMessageRoute } from "../axios/backend";
 
 const createMessage = async ({ content, receiver, group }) => {
     try {

@@ -1,9 +1,9 @@
-import { convosRoute } from "../axios/axios";
+import { convosRoute } from "../axios/backend";
 
 const removeConvos = async (userid) => {
     try {
         // console.log("object");
-        const removedConvos = await convosRoute.post(`/removeuser/${userid}`,{}, {
+        const removedConvos = await convosRoute.post(`/removeuser/${userid}`, {}, {
             headers: {
                 'auth-token': localStorage.getItem('token')
             }

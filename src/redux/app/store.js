@@ -6,6 +6,7 @@ import onlineUsersSlice from "../functions/onlineUsers"
 import userDetailsSlice from "../functions/userDetails"
 import allUsersSlice from "../functions/allUsers"
 import lastMessageSlice from '../functions/lastMessage'
+import aiChatsSlice from '../functions/aiChats'
 
 const store = configureStore({
     reducer: {
@@ -15,7 +16,8 @@ const store = configureStore({
         onlineUsersSlice,
         userDetailsSlice,
         allUsersSlice,
-        lastMessageSlice
+        lastMessageSlice,
+        aiChatsSlice
     }
 })
 
