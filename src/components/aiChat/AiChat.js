@@ -77,6 +77,7 @@ function AiMessageInput({ loading, changeLoading }) {
                 const fetchData = await aiRoute.post("", {
                     message: text
                 })
+                console.log(process.env.REACT_APP_AI_URL)
                 console.log(fetchData.data)
                 dispatch(addAiMessage({
                     timestamp: date,
