@@ -8,19 +8,12 @@ import './aiChat.css'
 import { aiRoute } from '../../axios/ai'
 
 function AiChat({ aiToggle }) {
-    const [users, setUsers] = useState([])
-    const allUsers = useSelector(state => state.allUsersSlice)
-    const { user } = useSelector(state => state.authSlice)
     const windowWidth = window.innerWidth
     const [loading, setLoading] = useState(false)
 
     const changeLoading = (e = !loading) => {
         setLoading(e)
     }
-    useEffect(() => {
-        // console.log(user);
-        setUsers([...allUsers])
-    }, [allUsers])
 
     const stopPropagation = (e) => {
         e.stopPropagation();
@@ -29,14 +22,14 @@ function AiChat({ aiToggle }) {
 
     return (
         <div onClick={() => aiToggle(false)} className='absolute bg-[#000000c9] sm:bg-[#000000ad] z-[9] top-0 w-full h-full flex justify-center items-center'>
-            <div onClick={stopPropagation} className='z-[10] md:w-auto sm:w-[65vw] w-[85vw] relative'>
+            <div onClick={stopPropagation} className='z-[10] lg:w-[55vw] md:w-[75vw] sm:w-[82vw] w-[98vw] relative'>
                 <div className='flex justify-center'>
                     <h1 className='text-white font-semibold text-center text-2xl select-none bg-[#180506] px-6 rounded-t-lg'>Ask Ai</h1>
                 </div>
                 <div className='aiBackgroundImage'></div>
-                <div className='md:flex-[1] md:min-w-[50vw] max-w-[75vw] w-full chatbox space-y-2 border-r-2 border-[#352011] shadow-2xl shadow-[#222222] overflow-y-auto sm:h-[55vh] h-[65vh] rounded-md'>
+                <div className='md:flex-[1] chatbox space-y-2 overflow-y-auto sm:h-[60vh] md:h-[70vh] h-[68vh] rounded-md'>
                     {/* bg-[#bb6b35e0] */}
-                    <div className={`md:flex-[5] message w-full h-full ${windowWidth <= 768 && 'hidden'} flex flex-col justify-between items-center z-[5]`}>
+                    <div className={`md:flex-[5] message w-full h-full flex flex-col justify-between items-center`}>
 
                         <AiMessageBox loading={loading} changeLoading={changeLoading} />
                         {/* text input */}
@@ -148,7 +141,7 @@ function AiMessageBox({ loading, changeLoading }) {
     }, [allMessages])
 
     return (
-        <div ref={messageBoxRef} className='messageBox h-full flex flex-col gap-3 px-3 overflow-auto pt-3 w-full lg:w-[68%] pb-1'>
+        <div ref={messageBoxRef} className='messageBox h-full flex flex-col gap-3 px-3 overflow-auto pt-3 w-full lg:w-[90%] pb-1'>
 
             { //bg-[#f9fafba8] text-gray-900 
                 allMessages?.length <= 0 &&

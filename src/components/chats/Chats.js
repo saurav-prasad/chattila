@@ -51,7 +51,7 @@ function Chats() {
 
     return (
         <>
-            <div className={`h-full bg-#A08790 border-r-2 border-[#222222] shadow-2xl shadow-[#222222] ${(params.userid && windowWidth <= 768) ? 'hidden' : 'block'}`}>
+            <div className={`h-full bg-[#be7e50] md:border-r-2 border-[#222222] shadow-2xl shadow-[#222222] ${(params.userid && windowWidth <= 768) ? 'hidden' : 'block'}`}>
                 {/* bg-[#8ABFA3] */}
                 <div className='md:h-[11vh] h-[13vh] px-2 py-1 flex flex-col justify-center items-start space-y-2 bg-[#2c2c2c] '>
                     <div className='flex justify-between items-center space-x-2'>
@@ -89,7 +89,7 @@ function Chats() {
 
                 </div>
 
-                <div className='md:flex-[1] w-full chatbox space-y-2 overflow-y-auto md:h-[89vh] h-[8vh%] bg-[#bb6b35e0] px-2 pt-2'>
+                <div className='md:flex-[1] w-full chatbox space-y-2 overflow-y-auto md:h-[89vh] h-[8vh%] bg-[#be7e50] px-2 pt-2'>
                     {/* bg-[#2c2c2c] */}
                     {
                         chatUsers?.map((data, i) =>

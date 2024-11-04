@@ -95,7 +95,7 @@ function User({ image, name, userId, isPopup = false }) {
                     :
                     <Plus onClick={onAddConvos} className='text-white cursor-pointer hover:bg-[#6b6a6a] transition-all rounded-sm' />)
             }
-            <div onClick={onClick} className={`w-full relative flex items-center flex-row gap-2 px-2 pr-5 py-1 rounded-md hover:bg-[#d07839] hover:transition-all ${userId === params?.userid && 'bg-[#e89153]'}`}>
+            <div onClick={onClick} className={`w-full relative flex items-center flex-row gap-2 px-2 pr-5 py-1 rounded-md hover:bg-[#cf8048] hover:transition-all ${userId === params?.userid && 'bg-[#e89153]'}`}>
                 <img
                     alt=""
                     src={image}
