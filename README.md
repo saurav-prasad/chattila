@@ -1,70 +1,105 @@
-# Getting Started with Create React App
+# Real-time application Project
+![logo192](https://github.com/user-attachments/assets/d24cbeb6-0140-4a02-bd17-ca673d7650ff)
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+<h1>Chattila</h1>
 
-## Available Scripts
+# Live Link : https://chattila.vercel.app
 
-In the project directory, you can run:
+## Table of Contents
+- [Introduction](#ntroduction)
+- [Tech Stack](#tech-stack)
+- [Screenshots](#screenshots)
+- [Features](#features)
+- [Installation](#installation)
 
-### `npm start`
+## Introduction
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+With a focus on simplicity and clean design, this app houses real-time chatting functionality and unleashes smart conversations by integrating AI.
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+## Tech Stack
 
-### `npm test`
+This project was built using the following technologies and tools:
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+- Frontend:
+  - HTML
+  - CSS
+  - JavaScript
+  - ReactJS
+  - Redux
+  - Axios
+  - Lucide React
+  - React awesome reveal
+  - Tailwindcss
+  - Socket.io Client
+  
 
-### `npm run build`
+- Backend:
+  - Mongoose
+  - Express
+  - Json web token
+  - Bcryptjs
+  - Cors
+  - Express validator
+  - Dotenv
+    
+  
+- Database:
+  - Mongodb
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+- Ai Integration:
+  - Groq
+  - Vercel SDK
+    
+- Real-time chatting:
+  - Socket.io
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+- Hosting & Deployment:
+  - Vercel
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+- Version Control:
+  - Git
+  - GitHub
 
-### `npm run eject`
+## Screenshots
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+<h1 align='center'>Homepage</h1>
+<img src='https://github.com/user-attachments/assets/99395d51-7669-4d05-9678-8dab8d53e6a5'/>
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+<h1 align='center'>Ai Integration</h1>
+<img src='https://github.com/user-attachments/assets/c99ab149-7e45-4f1e-bea4-59d0f548c447'/>
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+<h1 align='center'>All Users</h1>
+<img src='https://github.com/user-attachments/assets/f1c79312-d017-4681-9d64-e9a7c6b346f9' />
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
+<h1 align='center'>Authentication</h1>
+<img src='https://github.com/user-attachments/assets/08791ad3-1e83-4a1a-b9e3-708a018286e3' />
 
-## Learn More
+<h1 align='center'>Mobile view</h1>
+<img src='https://github.com/user-attachments/assets/0b5011d2-7b7b-4f4f-8250-640a96eda5f2' />
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+<h1 align='center'>Mobile View</h1>
+<img src='https://github.com/user-attachments/assets/6457f216-f69a-4fce-b115-4666a2372e30'/>
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+## Features
 
-### Code Splitting
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
+List some of the key features of my Chatting app:
 
-### Analyzing the Bundle Size
+- User registration and authentication
+- Real-time chatting
+- Ai smart conversation
+- View all users
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
+## Installation
 
-### Making a Progressive Web App
+Provide instructions for setting up and running your project locally. Include any prerequisites, environment setup, and installation steps.
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
+```bash
+# Clone the repository
+git clone https://github.com/saurav-prasad/chattila.git
 
-### Advanced Configuration
+# Install dependencies
+npm install
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+# Start the development server
+npm start
