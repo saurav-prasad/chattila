@@ -31,7 +31,7 @@ function Chats() {
         setAiToggleOpen(!aiToggleOpen)
     }
 
-    const onSubmit = async (e) => {
+    const onLogout = async (e) => {
         e.preventDefault()
         setTimeout(() => {
             dispatch(logout())
@@ -64,7 +64,7 @@ function Chats() {
                         {/* <div className='flex items-center space-x-2'> */}
                         {/* <UserRoundPlus onClick={() => setToggleOpen(!toggleOpen)} className='text-white cursor-pointer' /> */}
                         <button
-                            onClick={onSubmit}
+                            onClick={onLogout}
                             type="button"
                             className="rounded-md bg-red-600 px-2 py-1 text-sm font-semibold text-white shadow-sm hover:bg-red-600/80 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-red-600"
                         >
